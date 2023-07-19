@@ -1,3 +1,5 @@
+on: push
+name: on push
 jobs:
   build:
     runs-on: ubuntu-latest  # windows-latest | macos-latest
