@@ -12,8 +12,10 @@ jobs:
       with:
         python-version: "3.10"
     - name: Install dependencies
-      run: python .github/workflows/validate.py
-    - name: Exit with error
-      run: |
-        echo "Erroring"
-        exit 1
+      run: python .github/workflows/validate.py    
+    - name: List all changed files
+        run:|
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+     
