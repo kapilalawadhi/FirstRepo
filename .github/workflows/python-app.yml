@@ -17,7 +17,7 @@ jobs:
       id: changed-files-for-dir1
       uses: tj-actions/changed-files@v37
       with:
-        path: dir1
+        path:
     - name: List all changed files
       run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
