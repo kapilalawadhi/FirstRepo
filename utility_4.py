@@ -1,6 +1,6 @@
 # This function adds two numbers
-def add(x_26, y):
-    return x_26 + y
+def add(x_24, y):
+    return x_24 + y
 
 # This function subtracts two numbers
 def subtract(x, y):
