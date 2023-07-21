@@ -20,7 +20,7 @@ jobs:
 #        env:
 #          platform:azure
         run: |
-          echo"My Name NAME is $NAME"
+          echo"My Name NAME is ${{env.NAME}}"
           echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
 #      - id: get_log
 #        run: echo "Retrieving data ${{env.platform}}"
