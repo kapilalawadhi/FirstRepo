@@ -14,10 +14,11 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v14.6
+        with:
+          separator: "$"
       - id: print_log
         run: |
           pr_title=${{ steps.changed-files.outputs.all_changed_files }}
-          pr_title="$(echo $pr_title | sed 's/ /$/g')"
           echo "pr_title=$pr_title" >> $GITHUB_OUTPUT
           echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
       - uses: actions/checkout@v3
