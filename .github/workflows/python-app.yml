@@ -18,7 +18,7 @@ jobs:
         uses: tj-actions/changed-files@v14.6
       - id: print_log
         run: |
-          echo"My Name NAME is ${{env.NAME}}"
+          echo "My Name NAME is ${{env.NAME}}"
           echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
   job2:
     needs: job1
