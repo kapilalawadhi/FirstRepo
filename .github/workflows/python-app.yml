@@ -14,10 +14,8 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v14.6
-      - id: print_log
-        run: echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
-      - id: read_file_name
         run: |
+#          echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
           export FOO=bar
           echo "::set-env name=FOO::$FOO"
       - id: get_log
