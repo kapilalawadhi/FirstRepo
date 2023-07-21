@@ -20,6 +20,7 @@ jobs:
       - id: read_file_name
         run: echo "::set-output name=files_info ${{ steps.changed-files.outputs.all_changed_files }}"
   job2:
+    needs: job1
     runs-on: ubuntu-latest  # windows-latest | macos-latest
     name: python validations
     steps:
