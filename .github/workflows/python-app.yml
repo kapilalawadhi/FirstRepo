@@ -19,7 +19,7 @@ jobs:
       - id: read_file_name
         run: |
             changed_files=test_99
-            echo "::set-output name=files_info::$changed_files"
+            echo "::set-output name=files_info::WORLD"
   job2:
     needs: job1
     runs-on: ubuntu-latest  # windows-latest | macos-latest
