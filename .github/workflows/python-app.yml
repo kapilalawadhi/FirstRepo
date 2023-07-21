@@ -19,7 +19,7 @@ jobs:
       - id: print_log
         run: |
           echo "My Name NAME is ${{env.NAME}}"
-          NAME=change_HELLO
+          echo "::set-env name=NAME::failure_change_HELLO"
           echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
           echo "My Name NAME is ${{env.NAME}}"
 
@@ -34,5 +34,6 @@ jobs:
         with:
           python-version: "3.10"
       - id: get_log_job2
-        run: echo "job2->Retrieving data $platform"
+        run: echo "JOB2->My Name NAME is ${{env.NAME}}"
+
 
