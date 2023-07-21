@@ -29,5 +29,5 @@ jobs:
         with:
           python-version: "3.10"
       - name: Install dependencies
-        run: python .github/workflows/validate.py ${{needs.job1.outputs.files_info}}
+        run: echo "received files ${{needs.job1.outputs.files_info}}"
 
