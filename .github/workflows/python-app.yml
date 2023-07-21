@@ -20,7 +20,7 @@ jobs:
           env:
             platform:azure
       - id: get_log
-        run: echo "Retrieving data $platform"
+        run: echo "Retrieving data ${{env.platform}}"
   job2:
     needs: job1
     runs-on: ubuntu-latest  # windows-latest | macos-latest
