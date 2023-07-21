@@ -18,8 +18,10 @@ jobs:
         run: echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
       - id: read_file_name
         run: |
-            changed_files=test_99
-            echo "::set-output name=files_info::WORLD"
+          export FOO=bar
+          echo "::set-env name=FOO::$FOO"
+      - id: get_log
+        run: echo "Retrieving data $FOO"
   job2:
     needs: job1
     runs-on: ubuntu-latest  # windows-latest | macos-latest
@@ -30,6 +32,6 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
-      - name: Install dependencies
-        run: echo "received files ${{needs.job1.outputs.files_info}}"
+      - id: get_log_job2
+        run: echo "job2->Retrieving data $FOO"
 
