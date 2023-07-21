@@ -19,7 +19,10 @@ jobs:
       - id: print_log
         run: |
           echo "My Name NAME is ${{env.NAME}}"
+          NAME=change_HELLO
           echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
+          echo "My Name NAME is ${{env.NAME}}"
+
   job2:
     needs: job1
     runs-on: ubuntu-latest  # windows-latest | macos-latest
