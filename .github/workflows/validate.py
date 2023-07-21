@@ -3,7 +3,8 @@ import sys
 def main():
     print("Hello from action")
     print('Argument List:', str(sys.argv))
-    with open(str(sys.argv)) as f:
+    print('Argument List[1]:', str(sys.argv[1]))
+    with open(str(sys.argv[1])) as f:
         lines = f.readlines()
         print(lines)
 
