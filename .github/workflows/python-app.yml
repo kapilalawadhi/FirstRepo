@@ -19,4 +19,15 @@ jobs:
         run: echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
       - id: read_file_name
         run: echo "::set-output name=files_info ${{ steps.changed-files.outputs.all_changed_files }}"
+  job2:
+    runs-on: ubuntu-latest  # windows-latest | macos-latest
+    name: python validations
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: python .github/workflows/validate.py ${{needs.job1.outputs.files_info}}
 
