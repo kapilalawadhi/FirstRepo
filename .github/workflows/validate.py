@@ -3,8 +3,7 @@ import sys
 def main():
     print("Hello from action")
     print('Argument List:', str(sys.argv))
-    files = sys.argv[0]
-    for item in files.split('$'):
+    for item in str(sys.argv):
         print("filename->"& item)
         with open(item) as f:
             lines = f.readlines()
