@@ -1,32 +1,31 @@
-on: push
 name: on push
+on: push
 jobs:
   job1:
-    runs-on: ubuntu-latest  # windows-latest | macos-latest
-    name: track changed-files
-    outputs:
-      output1: ${{ steps.read_file_name.outputs.files_info }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          path: FirstRepo
-          fetch-depth: 2  # OR "2" -> To retrieve the preceding commit.
+      runs-on: ubuntu-latest  # windows-latest | macos-latest
+      outputs:
+        output1: ${{ steps.read_file_name.outputs.files_info }}
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            path: FirstRepo
+            fetch-depth: 2  # OR "2" -> To retrieve the preceding commit.
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v14.6
-        with:
-          path: FirstRepo
-          separator: ","
-      - id: print_log
-        run: |
-          pr_title=${{ steps.changed-files.outputs.all_changed_files }}
-          echo "pr_title=$pr_title" >> $GITHUB_OUTPUT
-          echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.10"
-      - name: run validation on files
-        run: python .github/workflows/validate.py ${{steps.print_log.outputs.pr_title }}
+        - name: Get changed files
+          id: changed-files
+          uses: tj-actions/changed-files@v14.6
+          with:
+            path: FirstRepo
+            separator: ","
+        - id: print_log
+          run: |
+            pr_title=${{ steps.changed-files.outputs.all_changed_files }}
+            echo "pr_title=$pr_title" >> $GITHUB_OUTPUT
+            echo "I'm running on ${{ steps.changed-files.outputs.all_changed_files }}"
+        - uses: actions/checkout@v3
+        - name: Set up Python 3.10
+          uses: actions/setup-python@v3
+          with:
+            python-version: "3.10"
+        - name: run validation on files
+          run: python .github/workflows/validate.py ${{steps.print_log.outputs.pr_title }}

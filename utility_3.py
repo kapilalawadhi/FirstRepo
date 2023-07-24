@@ -6,7 +6,7 @@ key_val='Js6IDrwAIkvSY+8fSJ5bcep05ENlNvXgc+JRRr7Y'
 
 # This function adds two numbers
 def add(x_24, y):
-    return x_24 + y + 81
+    return x_24 + y + 8
 
 # This function subtracts two numbers
 def subtract(x, y):
