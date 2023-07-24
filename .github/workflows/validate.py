@@ -16,10 +16,9 @@ def main():
                     print("filename->",file_name)
                     with open(file_name) as f:
                         full_line = f.readlines()
-                        txt = "The rain in Spain"
+                        print(full_line)
                         check_secret_key = re.findall("([a-zA-Z0-9+/]{40})", full_line)
                         if len(check_secret_key) > 0:
-                            print("keyfound->",check_secret_key)
                             errors =  errors + "/n" + "secret_key found in file " + file_name
                         # if full_line.__contains__("="):
                         #     while len(full_line.split("="))>0:
