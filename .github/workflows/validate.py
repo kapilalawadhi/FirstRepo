@@ -19,10 +19,10 @@ def main():
                         print("File_Data->\n",file_data)
                         check_secret_key = re.findall("([a-zA-Z0-9+/]{40})", file_data)
                         if len(check_secret_key) > 0:
-                            errors =  errors + "\n" + "secret_key found in file " + file_name
+                            errors =  errors + " " + "secret_key found in file " + file_name
     print("Validating completed")
     if len(errors)>0:
-        raise Exception("Sorry, issue with the current code snip->\n",errors)
+        raise Exception("Sorry, issue with the current code snip->",errors)
 
 if __name__== '__main__':
     main()
