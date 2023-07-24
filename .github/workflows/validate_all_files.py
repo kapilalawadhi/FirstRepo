@@ -14,12 +14,8 @@ def main():
             if file.endswith(".py"):
                 print(os.path.abspath(file))
                 if os.path.abspath(file).__contains__("validate"):
-                    print("EXCLUDED->",os.path.abspath(file))
-                    continue
-                else:
-                    print("inCLUDED->", os.path.abspath(file))
+                     continue
                 all_files.append(file)
-
 
     errors=''
     for file_name in all_files:
