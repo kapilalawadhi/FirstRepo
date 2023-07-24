@@ -2,8 +2,9 @@ on: push
 name: on push
 jobs:
   job1:
+    build:
+      name: python track changed-files
     runs-on: ubuntu-latest  # windows-latest | macos-latest
-    name: track changed-files
     outputs:
       output1: ${{ steps.read_file_name.outputs.files_info }}
     steps:
