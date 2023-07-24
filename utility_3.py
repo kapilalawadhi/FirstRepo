@@ -1,6 +1,11 @@
+one = 1
+two = 2
+three = 5
+
+
 # This function adds two numbers
-def add(x22, y):
-    return x22 + y + 8
+def add(x_24, y):
+    return x_24 + y + 81
 
 # This function subtracts two numbers
 def subtract(x, y):
