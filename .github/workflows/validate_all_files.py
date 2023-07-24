@@ -12,6 +12,8 @@ def main():
         print((len(path) - 1) * '---', os.path.basename(root))
         for file in files:
             if file.endswith(".py"):
+                if os.path.abspath(file).__contains__("/workflows/"):
+                    continue
                 all_files.append(file)
 
 
