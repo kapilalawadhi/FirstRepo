@@ -1,9 +1,7 @@
-on: push
 name: all files check
+on: push
 jobs:
   job1:
-    build:
-      name:PythonAllFiles
     runs-on: ubuntu-latest  # windows-latest | macos-latest
     steps:
       - uses: actions/checkout@v3
