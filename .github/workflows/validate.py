@@ -18,7 +18,8 @@ def main():
                     print("filename->",file_name)
                     with open(file_name) as f:
                         # print("full_line_before",full_line)
-                        full_line = f.readlines().replace("\"","\'")
+                        full_line = f.read().replace("\"","\'")
+                        # full_line = f.readlines().replace("\"","\'")
                         print("full_line_after",full_line)
                         check_secret_key = re.findall("([a-zA-Z0-9+/]{40})", full_line)
                         if len(check_secret_key) > 0:
