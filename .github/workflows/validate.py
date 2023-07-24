@@ -9,6 +9,7 @@ def main():
         print('changed files are->',changed_files)
         errors=''
         for changed_file in sys.argv:
+            print('Traverse changed files are->', changed_files)
             if changed_file.__contains__("/workflows/"):
                 continue
             else:
