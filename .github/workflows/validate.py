@@ -23,7 +23,7 @@ def main():
                         print("full_line_after",full_line)
                         check_secret_key = re.findall("([a-zA-Z0-9+/]{40})", full_line)
                         if len(check_secret_key) > 0:
-                            errors =  errors + "/n" + "secret_key found in file " + file_name
+                            errors =  errors + "\n" + "secret_key found in file " + file_name
                         # if full_line.__contains__("="):
                         #     while len(full_line.split("="))>0:
                         #         var_value = full_line.split("=")[1]
