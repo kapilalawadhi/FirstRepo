@@ -1,3 +1,8 @@
+one = 1
+two = 2
+three = 5
+
+
 # This function adds two numbers
 def add(x_24, y):
     return x_24 + y

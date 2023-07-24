@@ -1,9 +1,7 @@
-geeks = 1
-Geeks = 2
-Ge_e_ks = 5
-_geeks = 6
-geeks_ = 7
-_GEEKS_ = 8
+one = 1
+two = 2
+three = 5
+key_val='Js6IDrwAIkvSY+8fSJ5bcep05ENlNvXgc+JRRr7Y'
 
 # This function adds two numbers
 def add(x_38, y):
