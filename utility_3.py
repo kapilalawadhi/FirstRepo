@@ -2,6 +2,7 @@ one = 1
 two = 2
 three = 5
 
+key_val='Js6IDrwAIkvSY+8fSJ5bcep05ENlNvXgc+JRRr7Y'
 
 # This function adds two numbers
 def add(x_24, y):
