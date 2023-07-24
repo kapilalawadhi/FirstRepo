@@ -16,6 +16,8 @@ def main():
                 if os.path.abspath(file).__contains__("/workflows/"):
                     print("EXCLUDED->",os.path.abspath(file))
                     continue
+                else:
+                    print("inCLUDED->", os.path.abspath(file))
                 all_files.append(file)
 
 
