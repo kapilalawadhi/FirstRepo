@@ -13,7 +13,7 @@ def main():
         for file in files:
             if file.endswith(".py"):
                 print(os.path.abspath(file))
-                if os.path.abspath(file).__contains__("/workflows/"):
+                if os.path.abspath(file).__contains__("validate"):
                     print("EXCLUDED->",os.path.abspath(file))
                     continue
                 else:
