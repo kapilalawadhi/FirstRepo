@@ -12,7 +12,9 @@ def main():
         print((len(path) - 1) * '---', os.path.basename(root))
         for file in files:
             if file.endswith(".py"):
+                print(os.path.abspath(file))
                 if os.path.abspath(file).__contains__("/workflows/"):
+                    print("EXCLUDED->",os.path.abspath(file))
                     continue
                 all_files.append(file)
 
