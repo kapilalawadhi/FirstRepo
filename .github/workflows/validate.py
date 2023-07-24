@@ -12,6 +12,7 @@ def main():
             if changed_file.__contains__("/workflows/"):
                 continue
             else:
+                print('effective changed_file name->', changed_file)
                 for file_name in changed_file.split(","):
                     print("filename->",file_name)
                     with open(file_name) as f:
