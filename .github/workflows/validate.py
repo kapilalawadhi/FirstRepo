@@ -33,7 +33,6 @@ def main():
 
 
 
-                        print(lines)
     if len(errors)>0:
         raise Exception("Sorry, issue with the current code snip->/n",errors)
 
