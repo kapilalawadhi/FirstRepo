@@ -3,7 +3,7 @@ import sys
 def main():
     print("Hello from action")
     print('Argument List:', str(sys.argv))
-    if sys.argv.count()>0:
+    if len(sys.argv) >0:
         changed_files = sys.argv[1]
         print('changed files are->',changed_files)
         for item in sys.argv[1].split(","):
