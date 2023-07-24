@@ -5,7 +5,7 @@ three = 5
 
 # This function adds two numbers
 def add(x_24, y):
-    return x_24 + y + 26
+    return x_24 + y + 27
 
 # This function subtracts two numbers
 def subtract(x, y):
